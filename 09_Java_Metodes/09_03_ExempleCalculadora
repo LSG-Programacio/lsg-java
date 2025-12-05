@@ -1,0 +1,123 @@
+import java.util.Scanner;
+
+public class Main {
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+
+    public static void main(String[] args) {
+
+//        System.out.println(ANSI_PURPLE + "Hola mundo" + ANSI_RESET);
+
+//        saluda();
+//        saluda();
+//        saluda();
+//        saluda();
+//        saluda();
+//        saluda();
+
+//        saludaConColor("rojo", "Hola!");
+//        saludaConColor("verde", "Cómo estas?");
+//        saludaConColor("amarillo" , "Muy Bien");
+//        saludaConColor("lila" , "Recuerdos a la familia");
+//        saludaConColor("salmon" , "Feliz navidad!");
+
+//        Integer resultado = suma(1,2);
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        saludaConColor("amarillo", "Bienvenido a la calculadora!!!");
+        saludaConColor("amarillo", "Pon un numero");
+        String numero1 = scanner.nextLine();
+        saludaConColor("amarillo", "Pon otro numero");
+        String numero2 = scanner.nextLine();
+        saludaConColor("amarillo", "Pon la operacion (S: suma, R: resta, M: multiplicacion, D: division)");
+        String operacion = scanner.nextLine();
+
+        switch (operacion){
+            case "S" -> menuSuma(numero1, numero2);
+            case "R" -> menuResta(numero1, numero2);
+            case "M" -> menuMultiplicacion(numero1, numero2);
+            case "D" -> menuDivision(numero1, numero2);
+        }
+
+    }
+
+    public static void saluda() {
+        System.out.println(ANSI_RED + "Hola!" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "Hola!" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "Hola!" + ANSI_RESET);
+    }
+
+    public static void saludaConColor(String color, String message) {
+
+        switch (color) {
+            case "rojo":
+                System.out.println(ANSI_RED + message + ANSI_RESET);
+                break;
+            case "verde":
+                System.out.println(ANSI_GREEN + message + ANSI_RESET);
+                break;
+            case "amarillo":
+                System.out.println(ANSI_YELLOW + message + ANSI_RESET);
+                break;
+            case "lila":
+                System.out.println(ANSI_PURPLE + message + ANSI_RESET);
+                break;
+            case "cyan":
+                System.out.println(ANSI_CYAN + message + ANSI_RESET);
+                break;
+            default:
+                System.out.println(ANSI_BLUE + message + ANSI_RESET);
+                break;
+        }
+    }
+
+    public static void menuSuma(String numero1, String numero2){
+        Integer resultado = suma(Integer.parseInt(numero1), Integer.parseInt(numero2));
+        saludaConColor("cyan", "El resultado es " + resultado);
+    }
+
+    public static void menuResta(String numero1, String numero2){
+        Integer resultado = resta(Integer.parseInt(numero1), Integer.parseInt(numero2));
+        saludaConColor("blue", "El resultado es " + resultado);
+    }
+
+    public static void menuMultiplicacion(String numero1, String numero2){
+        Integer resultado = multiplicacion(Integer.parseInt(numero1), Integer.parseInt(numero2));
+        saludaConColor("green", "El resultado es " + resultado);
+    }
+
+    public static void menuDivision(String numero1, String numero2){
+
+        if (numero2.equals("0")){
+            saludaConColor("rojo", "NO SE PUEDE DIVIDIR POR 0");
+            return;
+        }
+
+        Float resultado = division(Float.parseFloat(numero1), Float.parseFloat(numero2));
+        saludaConColor("yellow", "El resultado es " + resultado);
+    }
+
+
+    public static Integer suma(Integer sumando1, Integer sumando2){
+        return  sumando1 + sumando2;
+    }
+
+    public static Integer resta(Integer minuendo, Integer sustraendo){
+        return  minuendo - sustraendo;
+    }
+    public static Integer multiplicacion(Integer multiplicando, Integer multiplicador){
+        return  multiplicando * multiplicador;
+    }
+    public static Float division(Float dividendo, Float divisor){
+        return dividendo / divisor;
+    }
+}
