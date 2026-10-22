@@ -57,4 +57,11 @@ public class ExempleOutput {
 | `Scanner`       | `java.util.Scanner`    | Input            |
 | `System.out`    | `java.lang.System`     | Output consola   |
 
+## Exemples executables i ampliació
+
+- [Scanner](03_01_Java_Scanner/README.md): lectura de text, enters i decimals; diferències entre `next()`, `nextLine()` i els mètodes numèrics. Després de `nextInt()`, un `nextLine()` consumeix el salt de línia pendent.
+- [Print, println i printf](03_02_Java_Print/README.md): sortida amb o sense salt de línia i format amb `%s`, `%d`, `%.2f` i `%n`.
+
+Per a fitxers, consulta [Java Files](../11_Java_Files/README.md). Cal gestionar els errors de format de les dades i tancar els recursos quan s'acaben d'utilitzar.
+
 

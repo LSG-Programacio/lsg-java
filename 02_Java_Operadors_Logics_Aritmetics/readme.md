@@ -135,4 +135,14 @@ public class OperadorsAritmetics {
     }
 }
 
+```
+
+## Operadors de comparació i precedència
+
+Els operadors relacionals són `==`, `!=`, `>`, `<`, `>=` i `<=`. Entre els operadors aritmètics, `*`, `/` i `%` s'avaluen abans que `+` i `-`. Les comparacions es poden combinar amb `!`, `&&` i `||`; entre aquests tres, `!` té més precedència, després `&&` i finalment `||`. Els parèntesis permeten explicitar l'ordre.
+
+Per comparar el contingut de cadenes, utilitza `.equals()`. `++x` incrementa abans d'utilitzar el valor, mentre que `x++` utilitza primer el valor anterior.
+
+Consulta les taules de veritat, OR, NOT i l'avaluació en curtcircuit a [Operadors lògics](02_01_Java_Operadors_Logics/README.md), amb el codi existent de `OperadorsLogics.java`.
+
 

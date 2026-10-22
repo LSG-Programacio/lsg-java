@@ -111,3 +111,15 @@ Els tipus de referència no emmagatzemen directament el valor en la variable, si
     * Inclouen **Classes**, **Interfícies**, **Arrays** i **Enumeracions (Enums)**.
     * Els noms de les classes comencen amb majúscula per convenció.
 
+## Declaració, inicialització i assignació
+
+La declaració crea una variable amb un tipus; la inicialització li dona el primer valor, i una assignació posterior el modifica.
+
+```java
+int edat;       // Declaració
+edat = 25;      // Inicialització
+edat = 26;      // Nova assignació
+```
+
+Les variables locals s'han d'inicialitzar abans d'utilitzar-les. Per convenció, els noms de variables segueixen `camelCase`. No s'ha de confondre `=` (assignació) amb `==` (comparació).
+

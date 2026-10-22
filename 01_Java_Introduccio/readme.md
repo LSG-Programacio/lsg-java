@@ -63,3 +63,12 @@ Un IDE et facilita l'escriptura, compilació, depuració i execució del teu cod
 5.  **Comença a programar!** 🎉
 
 Amb aquests elements, estaràs llest per començar a desenvolupar les teves aplicacions Java a Windows 11. Molta sort!
+
+## Temari i estructura bàsica de Java
+
+El programa comença al mètode `public static void main(String[] args)` d'una classe. El nom del fitxer ha de coincidir amb el de la classe pública; Java diferencia majúscules i minúscules.
+
+- [Primer programa Hello World](01_01_Java_Hello_World/readme.md): classe, mètode `main`, compilació i sortida per consola.
+- [Variables primitives](01_02_Java_Variables_Primitives/readme.md): declaració, inicialització i assignació dels vuit tipus primitius.
+
+Aquests apartats amplien la guia d'instal·lació amb el material de [LSG_0485_Java](https://github.com/fconstanslasalle/LSG_0485_Java).
